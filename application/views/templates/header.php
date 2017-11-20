@@ -8,7 +8,7 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">DnD Dashboard</a>
+      <a class="navbar-brand" href="#">Webshop</a>
     </div>
 
 
