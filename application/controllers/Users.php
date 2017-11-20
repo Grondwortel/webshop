@@ -8,6 +8,8 @@ class Users extends CI_Controller {
         parent::__construct();
         $this->load->library('form_validation');
         $this->load->model('user');
+        $this->load->view('templates/header');
+        $this->load->view('templates/footer');
     }
     
     /*
@@ -22,6 +24,9 @@ class Users extends CI_Controller {
         }else{
             redirect('users/login');
         }
+
+        
+
     }
     
     /*
