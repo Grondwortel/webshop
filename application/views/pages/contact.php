@@ -1,5 +1,17 @@
-Dit is de webshop van Arija en Leon
-0183-222555
+<!DOCTYPE html>
+<html lang="en">  
+<head>
 
-[x]
-
+</head>
+<body>
+<div class="container">
+    <h2>Klacht indienen</h2>
+  <!-- <h3>Welcome <?php echo $user['name']; ?>!</h3> -->
+    <div class="form-group">
+  <!--		<label for="comment">Comment:</label> -->
+  		<textarea class="form-control" rows="5" id="comment"></textarea>
+	</div>
+    </div>
+</div>
+</body>
+</html>
