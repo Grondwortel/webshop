@@ -6,6 +6,14 @@ class User extends CI_Model{
     /*
      * get rows from the users table
      */
+    function getRolesForUserID($id) { // 1/ FUNCTION GET ROLESBYUSERid AANGEMAAKT -->  $Role is dus kolom. // class user wordt aangeroepen -->
+        $roles = $this->user->getRows(array('id'=>$id)); // user staat voor de classname
+        //       
+                                                                                                
+        var_dump($roles); // 
+        //return $roles;  // Array returnenen en uitlezen.
+    }
+
     function getRows($params = array()){
         $this->db->select('*');
         $this->db->from($this->userTbl);
