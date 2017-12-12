@@ -7,9 +7,9 @@ class Users extends CI_Controller {
     function __construct() {
         parent::__construct();
         $this->load->library('form_validation');
-        $this->load->model('user');
         $this->load->view('templates/header');
         $this->load->view('templates/footer');
+        $this->load->model('User_model');
     }
 
     /*
@@ -18,7 +18,9 @@ class Users extends CI_Controller {
     public function account(){
         $data = array();
         if($this->session->userdata('isUserLoggedIn')){
-            $data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
+            //$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
+            $data['role'] = getRoles(); //aanroepen functie NEW! // binnnen controller toepassen
+            
             //load the view
             $this->load->view('users/account', $data);
         }else{
