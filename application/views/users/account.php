@@ -5,9 +5,9 @@
 </head>
 <body>
 <div class="container">
-	<?php
-	$this->user->getRolesForUserID($user['id']); //aanroepen functie NEW!
-	?>
+    <?php
+    $this->user->getRolesForUserID(array('id'=>$user['id'])); //aanroepen functie NEW!
+    ?>
     <h2>User Account</h2>
     <h3>Welcome <?php echo $user['name']; ?>!</h3>
     <div class="account-info">

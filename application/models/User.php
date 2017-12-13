@@ -2,13 +2,22 @@
 class User extends CI_Model{
     function __construct() {
         $this->userTbl = 'users';
+        $this->rolesUsr = 'roles_users';
     }
     /*
      * get rows from the users table
      */
-    function getRolesForUserID($id) { // 1/ FUNCTION GET ROLESBYUSERid AANGEMAAKT -->  $Role is dus kolom. // class user wordt aangeroepen -->
-        $roles = $this->user->getRows(array('id'=>$id)); // user staat voor de classname
-        //       
+    function getRolesForUserID($params = array()) { // 1/ FUNCTION GET ROLESBYUSERid AANGEMAAKT -->  $Role is dus kolom. // class user wordt aangeroepen -->
+        $this->db->select('*');
+        $this->db->from($this->rolesUsr);
+        
+        if(array_key_exists("id",$params)){
+            $this->db->where('user_id',$params['id']);
+            $query = $this->db->get();
+            $roles = $query->row_array();
+        }else{
+            // niks. foutmelding?
+        }       
                                                                                                 
         var_dump($roles); // 
         //return $roles;  // Array returnenen en uitlezen.
