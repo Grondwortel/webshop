@@ -14,12 +14,17 @@ class User extends CI_Model{
         if(array_key_exists("id",$params)){
             $this->db->where('user_id',$params['id']);
             $query = $this->db->get();
-            $roles = $query->row_array();
+            $roles = $query->result_array();
         }else{
             // niks. foutmelding?
+            // $roles = error?;
         }       
-                                                                                                
-        var_dump($roles); // 
+             
+        //echo $this->db->count_all_results($roles);
+        //var_dump($roles); //
+        foreach ($roles as $key => $value) {
+            
+        }
         //return $roles;  // Array returnenen en uitlezen.
     }
 
