@@ -56,7 +56,7 @@ class Users extends CI_Controller {
                 if($checkLogin){
                     $this->session->set_userdata('isUserLoggedIn',TRUE);
                     $this->session->set_userdata('userId',$checkLogin['id']);
-                    $userRoles = $this->user->getRolesForUserID(array('id'=>$checkLogin['id']))
+                    $userRoles = $this->user->getRolesForUserID(array('id'=>$checkLogin['id']));
                     $this->session->set_userdata('userRoles',$userRoles);
                     redirect('users/account/');
                 }else{

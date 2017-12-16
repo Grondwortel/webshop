@@ -8,7 +8,7 @@ class User extends CI_Model{
      * get rows from the users table
      */
     function getRolesForUserID($params = array()) { // 1/ FUNCTION GET ROLESBYUSERid AANGEMAAKT -->  $Role is dus kolom. // class user wordt aangeroepen -->
-        $this->db->select('*');
+        $this->db->select('role_id');
         $this->db->from($this->rolesUsr);
         
         if(array_key_exists("id",$params)){
@@ -22,10 +22,11 @@ class User extends CI_Model{
              
         //echo $this->db->count_all_results($roles);
         //var_dump($roles); //
-        foreach ($roles as $key => $value) {
-            
-        }
-        //return $roles;  // Array returnenen en uitlezen.
+        //foreach ($roles as $role) {
+        //    echo $role["role_id"];
+        //}
+
+        return $roles;
     }
 
     function getRows($params = array()){
