@@ -31,7 +31,7 @@
 </tr>
 <tr>
  <td colspan="2" style="text-align:center">
-  <input type="submit" name="submit" value="Submit" button type="button" id='submit' class="btn btn-success">
+  <input type="submit" name="ticketSubmit" value="Submit" button type="button" id='submit' class="btn btn-success">
 
  </td>
 </tr>
