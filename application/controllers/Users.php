@@ -24,9 +24,20 @@ class Users extends CI_Controller {
         }else{
             redirect('users/login');
         }
+    }
 
-        
-
+    public function inkoper(){
+        $data = array();
+        foreach ($this->session->userdata('userRoles') as $key => $value) {
+            if (!empty($value["role_id"])) {
+                if ($value["role_id"] == 2) {
+                    $this->load->view('users/inkoper', $data);
+                    return true;
+                }
+            }
+        }
+        $this->load->view('users/noperm', $data);
+        return false;
     }
 
     /*
@@ -54,7 +65,7 @@ class Users extends CI_Controller {
                 );
                 $checkLogin = $this->user->getRows($con);
                 if($checkLogin){
-                    $this->session->set_userdata('isUserLoggedIn',TRUE);
+                    $this->session->set_userdata('isUserLoggedIn', TRUE);
                     $this->session->set_userdata('userId',$checkLogin['id']);
                     $userRoles = $this->user->getRolesForUserID(array('id'=>$checkLogin['id']));
                     $this->session->set_userdata('userRoles',$userRoles);
