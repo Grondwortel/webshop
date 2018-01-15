@@ -13,11 +13,22 @@
 
 
       <ul class="nav navbar-nav">
-        <li class=""><a href="/webshop">Home <span class="sr-only">(current)</span></a></li>
+        <li class=""><a href="/">Home <span class="sr-only">(current)</span></a></li>
         <li><a href="<?php echo base_url(); ?>contact">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <?php
+        if (isset($_SESSION["userRoles"])) {
+          foreach ($this->session->userdata('userRoles') as $key => $value) {
+              if (!empty($value["role_id"])) {
+                  if ($value["role_id"] == 1) {
+                      ?>
+                      <li><a href="<?php echo base_url(); ?>tickets/viewtickets">Bekijk ingezonden tickets</a></li>
+                      <?php
+                  }
+              }
+          }
+        }
         if (isset($_SESSION["isUserLoggedIn"])) { // $this->session->has_userdata($_SESSION["userId"]) geeft foutmelding als session niet bestaat
           ?>
           <li><a href="<?php echo base_url(); ?>users/account">Mijn account</a></li>
