@@ -9,7 +9,7 @@
 <div class="container">
     <h2>Submit a ticket</h2>
 
-    <p>Do want te be in contact with us? Feel free to full in this form</p>
+    <p>Do want te be in contact with us? Feel free to fill in this form</p>
   	
   	<form action="<?php echo (URL . 'tickets/submitCreate'); ?>" method="post">
 <table width="450px">
