@@ -35,6 +35,14 @@
         }
         if (isset($_SESSION["isUserLoggedIn"])) { // $this->session->has_userdata($_SESSION["userId"]) geeft foutmelding als session niet bestaat
           ?>
+          <li><a href="<?php echo base_url(); ?>products/index">Product list</a></li>
+          <?php
+          $totalitems = 0;
+          foreach($this->cart->contents() as $items) {
+            $totalitems = ($totalitems + $items['qty']);
+          }
+          ?>
+          <li><a href="<?php echo base_url(); ?>shop/index">Shopping cart (<?php echo $totalitems; ?>)</a></li>
           <li><a href="<?php echo base_url(); ?>users/account">My account</a></li>
           <li><a href="<?php echo base_url(); ?>users/logout">Logout</a></li>
           <?php
