@@ -14,7 +14,7 @@
 
 
       <ul class="nav navbar-nav">
-        <li class=""><a href="/">Home <span class="sr-only">(current)</span></a></li>
+        <li class=""><a href="/">Homepagina <span class="sr-only">(current)</span></a></li>
         <li><a href="<?php echo base_url(); ?>contact">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -32,7 +32,7 @@
         }
         if (isset($_SESSION["isUserLoggedIn"])) { // $this->session->has_userdata($_SESSION["userId"]) geeft foutmelding als session niet bestaat
           ?>
-          <li><a href="<?php echo base_url(); ?>products/index">Product list</a></li>
+          <li><a href="<?php echo base_url(); ?>products/index">Producten lijst</a></li>
           <?php
           $totalitems = 0;
           foreach($this->cart->contents() as $items) {
@@ -40,13 +40,13 @@
           }
           ?>
           <li><a href="<?php echo base_url(); ?>shop/index">Shopping cart (<?php echo $totalitems; ?>)</a></li>
-          <li><a href="<?php echo base_url(); ?>users/account">My account</a></li>
-          <li><a href="<?php echo base_url(); ?>users/logout">Logout</a></li>
+          <li><a href="<?php echo base_url(); ?>users/account">Mijn account</a></li>
+          <li><a href="<?php echo base_url(); ?>users/logout">Uitloggen</a></li>
           <?php
         }else{
           ?>
-          <li><a href="<?php echo base_url(); ?>users/registration">Registration</a></li>
-          <li><a href="<?php echo base_url(); ?>users/login">Login</a></li>
+          <li><a href="<?php echo base_url(); ?>users/registration">Registratie</a></li>
+          <li><a href="<?php echo base_url(); ?>users/login">Inloggen</a></li>
           <?php
         }
         ?>
