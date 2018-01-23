@@ -1,2 +1,2 @@
 <h2>Homepage 🛒</h2>
-<p>Welcome to the homepage!</p>
+<p>Welkom bij de Homepagina!</p>

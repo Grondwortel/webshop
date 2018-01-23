@@ -35,8 +35,8 @@
           <li><a href="<?php echo base_url(); ?>products/index">Producten lijst</a></li>
           <?php
           $totalitems = 0;
-          foreach($this->cart->contents() as $items) {
-            $totalitems = ($totalitems + $items['qty']);
+          foreach($this->cart->contents() as $items) { // We breken de cart onderdelen in stukken.
+            $totalitems = ($totalitems + $items['qty']); // Hier creëren we onze input veld met de naam qty[] dit geeft ons toegang om te communiceren met de array wanneer het is gepost.
           }
           ?>
           <li><a href="<?php echo base_url(); ?>shop/index">Shopping cart (<?php echo $totalitems; ?>)</a></li>
