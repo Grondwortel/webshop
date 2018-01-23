@@ -71,7 +71,7 @@ class Users extends CI_Controller {
                     $this->session->set_userdata('userRoles',$userRoles);
                     redirect('users/account/');
                 }else{
-                    $data['error_msg'] = 'Wrong email or password, please try again.';
+                    $data['error_msg'] = 'Verkeerd email adres of wachtwoord, probeer het opnieuw.';
                 }
             }
         }

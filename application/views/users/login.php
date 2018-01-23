@@ -5,7 +5,7 @@
 </head>
 <body>
 <div class="container">
-    <h2>User Login</h2>
+    <h2>Inloggen</h2>
     <?php
     if(!empty($success_msg)){
         echo '<p class="statusMsg">'.$success_msg.'</p>';
@@ -19,14 +19,14 @@
             <?php echo form_error('email','<span class="help-block">','</span>'); ?>
         </div>
         <div class="form-group">
-          <input type="password" class="form-control" name="password" placeholder="Password" required="">
+          <input type="password" class="form-control" name="password" placeholder="Wachtwoord" required="">
           <?php echo form_error('password','<span class="help-block">','</span>'); ?>
         </div>
         <div class="form-group">
-            <input type="submit" name="loginSubmit" class="btn-primary" value="Submit"/>
+            <input type="submit" name="loginSubmit" class="btn-primary" value="Inloggen"/>
         </div>
     </form>
-    <p class="footInfo">Don't have an account? <a href="<?php echo base_url(); ?>users/registration">Register here</a></p>
+    <p class="footInfo">Geen account? <a href="<?php echo base_url(); ?>users/registration">Registreer hier</a></p>
 </div>
 </body>
 </html>
