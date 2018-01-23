@@ -9,12 +9,12 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="/">Webshop</a>
+      <a class="navbar-brand" href="/">Webshop🛒</a>
     </div>
 
 
       <ul class="nav navbar-nav">
-        <li class=""><a href="/">Homepagina <span class="sr-only">(current)</span></a></li>
+        <li class=""><a href="<?php echo base_url(); ?>pages/view">Homepagina<span class="sr-only">(current)</span></a></li>
         <li><a href="<?php echo base_url(); ?>contact">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -24,7 +24,7 @@
               if (!empty($value["role_id"])) {
                   if ($value["role_id"] == 1) {
                       ?>
-                      <li><a href="<?php echo base_url(); ?>tickets/viewtickets">View submitted tickets</a></li>
+                      <li><a href="<?php echo base_url(); ?>tickets/viewtickets">Bekijk ingezonden tickets</a></li>
                       <?php
                   }
               }

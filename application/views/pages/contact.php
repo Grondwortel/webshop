@@ -7,15 +7,15 @@
   <?php echo $this->session->flashdata('error'); ?>
   <?php echo $this->session->flashdata('success'); ?>
 <div class="container">
-    <h2>Submit a ticket</h2>
+    <h2>Ticket indienen</h2>
 
-    <p>Do want te be in contact with us? Feel free to fill in this form</p>
+    <p>Wilt u contact met ons opnemen? Voel je vrij om dit formulier in te vullen</p>
   	
   	<form action="<?php echo (URL . 'tickets/submitCreate'); ?>" method="post">
 <table width="450px">
 <tr>
  <td valign="top">
-  <label for="subject">Subject *</label>
+  <label for="subject">Onderwerp *</label>
  </td>
  <td valign="top">
   <input  type="text" name="subject" id="subject" maxlength="50" size="30">
@@ -23,7 +23,7 @@
 </tr>
 <tr>
  <td valign="top">
-  <label for="ticket">Your ticket *</label>
+  <label for="ticket">Uw Ticket *</label>
  </td>
  <td valign="top">
   <textarea  name="ticket" maxlength="1000" cols="25" rows="6"></textarea>
@@ -31,7 +31,7 @@
 </tr>
 <tr>
  <td colspan="2" style="text-align:center">
-  <input type="submit" name="ticketSubmit" value="Submit" button type="button" id='submit' class="btn btn-success">
+  <input type="submit" name="ticketSubmit" value="Indienen" button type="button" id='submit' class="btn btn-success">
 
  </td>
 </tr>
