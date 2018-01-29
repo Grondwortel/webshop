@@ -7,17 +7,17 @@ class User extends CI_Model{
     /*
      * get rows from the users table
      */
-    function getRolesForUserID($params = array()) { // 1/ FUNCTION GET ROLESBYUSERid AANGEMAAKT -->  $Role is dus kolom. // class user wordt aangeroepen -->
-        $this->db->select('role_id');
-        $this->db->from($this->rolesUsr);
+    function getRolesForUserID($params = array()) { // 1/ FUNCTION GET ROLESBYUSERid AANGEMAAKT --> 
+        $this->db->select('role_id');               // kolom role_id selecteren
+        $this->db->from($this->rolesUsr);    // varibl rolesUsr = table roles_users
         
-        if(array_key_exists("id",$params)){
-            $this->db->where('user_id',$params['id']);
+        if(array_key_exists("id",$params)){  // Argument id is gezet selecteren van roles_id.
+            $this->db->where('user_id',$params['id']); // User_id het opgegeven id is.
             $query = $this->db->get();
             $roles = $query->result_array();
         }else{
             // niks. foutmelding?
-            // $roles = error?;
+            //$roles = error?;
         }       
              
         //echo $this->db->count_all_results($roles);

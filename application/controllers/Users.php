@@ -67,8 +67,8 @@ class Users extends CI_Controller {
                 if($checkLogin){
                     $this->session->set_userdata('isUserLoggedIn', TRUE);
                     $this->session->set_userdata('userId',$checkLogin['id']);
-                    $userRoles = $this->user->getRolesForUserID(array('id'=>$checkLogin['id']));
-                    $this->session->set_userdata('userRoles',$userRoles);
+                    $userRoles = $this->user->getRolesForUserID(array('id'=>$checkLogin['id'])); // users class en function getRoles, Return komt dus in $userRoles
+                    $this->session->set_userdata('userRoles',$userRoles); // Roles in session geplaatst. userRoles= Kopje hoe het heet, gestopt binnen $userRoles
                     redirect('users/account/');
                 }else{
                     $data['error_msg'] = 'Verkeerd email adres of wachtwoord, probeer het opnieuw.';

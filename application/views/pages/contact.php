@@ -11,19 +11,19 @@
 
     <p>Wilt u contact met ons opnemen? Voel je vrij om dit formulier in te vullen</p>
   	
-  	<form action="<?php echo (URL . 'tickets/submitCreate'); ?>" method="post">
+  	<form action="<?php echo (URL . 'tickets/submitCreate'); ?>" method="post"> <!-- submitten -> bestand controller/tickets.php  functie=submitcreate. -->
 <table width="450px">
 <tr>
  <td valign="top">
-  <label for="subject">Onderwerp *</label>
+  <label for="subject">Onderwerp *</label> <!-- Label van Subject -->
  </td>
  <td valign="top">
-  <input  type="text" name="subject" id="subject" maxlength="50" size="30">
+  <input  type="text" name="subject" id="subject" maxlength="50" size="30"> 
  </td>
 </tr>
 <tr>
  <td valign="top">
-  <label for="ticket">Uw Ticket *</label>
+  <label for="ticket">Uw Ticket *</label> <!-- Label van Ticket -->
  </td>
  <td valign="top">
   <textarea  name="ticket" maxlength="1000" cols="25" rows="6"></textarea>
@@ -31,7 +31,7 @@
 </tr>
 <tr>
  <td colspan="2" style="text-align:center">
-  <input type="submit" name="ticketSubmit" value="Indienen" button type="button" id='submit' class="btn btn-success">
+  <input type="submit" name="ticketSubmit" value="Indienen" button type="button" id='submit' class="btn btn-success"> <!-- Als we dit formulier submitten (/14) -->
 
  </td>
 </tr>
